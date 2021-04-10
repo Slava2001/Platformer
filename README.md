@@ -1,0 +1,2 @@
+# Platformer
+OpenGL, OpenMP, WinSock
