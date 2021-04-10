@@ -1,5 +1,5 @@
 #include "menu.h"
-
+#include "textOut.h"
 
 GLFWwindow* window;
 
@@ -15,8 +15,9 @@ void exitbtn();
 
 void MenuInit()
 {
-	char *text[] = { "Connecting", "exit"};
-	mainMenuList = ButtonCreateButtonList(2, 1, 1, 3, 1, 0.3, text, Connecting, exitbtn);
+	char* text[] = { "подкл","выход" };
+
+	mainMenuList = ButtonCreateButtonList(2, 0, 0, 3, 1, 0.3,&text, Connecting, exitbtn);
 }
 void MenuUpdate()
 {
@@ -25,6 +26,7 @@ void MenuUpdate()
 void MenuDraw()
 {
 	ButtonDraw(&mainMenuList);
+	
 }
 
 void Connecting()
