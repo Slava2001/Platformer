@@ -11,7 +11,7 @@
 #include "Lan.h"
 #include <time.h>
 #include "menu.h"
-
+#include "textOut.h"
 
 const int width = 800;
 const int height = 600;
@@ -74,6 +74,7 @@ int main(int argc, char* argv[])
 
 
 				glClearColor(117 / 255., 193 / 255., 1, 1.0f);
+
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 

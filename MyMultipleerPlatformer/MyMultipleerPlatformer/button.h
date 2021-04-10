@@ -1,6 +1,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "TextureInit.h"
+#include "textOut.h"
 #pragma comment (lib, "glew32.lib" )
 #pragma comment (lib, "OpenGL32.lib")
 

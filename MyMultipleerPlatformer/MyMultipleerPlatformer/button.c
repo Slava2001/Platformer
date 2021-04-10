@@ -13,7 +13,7 @@ ButtonList ButtonCreateButtonList(int size, float x, float y, float w, float h, 
 
 	for (int i = 0; i < size;i++)
 	{
-		tmp->button->text = text[i];
+		tmp->button[i].text = text[i];
 		tmp->button[i].pozX = x;
 		tmp->button[i].pozY = y;
 		tmp->button[i].sizX = w;
@@ -61,6 +61,15 @@ void ButtonUbdate(ButtonList* list)
 }
 void ButtonDraw(ButtonList* list)
 {
+	glColor3f(0, 0, 0);
+	for (int x = 0; x < list->size; x++)
+	{
+		//glTranslatef(list->button[x].pozX, -list->button[x].pozY, 0);
+		
+		Textout(list->button[x].text, list->button[x].pozX+0.3, list->button[x].pozY+ list->button[x].sizY / 4, list->button[x].sizY / 2);
+	}
+	glColor3f(1, 1, 1);
+
 
 	static GLuint cubeind[] = { 0,1,2,2,3,0 };
 	static int cubeindcnt = sizeof(cubeind) / sizeof(GLuint);
@@ -87,7 +96,6 @@ void ButtonDraw(ButtonList* list)
 	glVertexPointer(2, GL_FLOAT, 0, cube);
 	glColor3f(1, 1, 1);
 
-
 	for (int x = 0; x < list->size; x++)
 	{
 		glPushMatrix();
@@ -101,10 +109,16 @@ void ButtonDraw(ButtonList* list)
 
 		glDrawElements(GL_TRIANGLES, cubeindcnt, GL_UNSIGNED_INT, cubeind);
 
+		glColor3f(0, 0, 0);
+
+	
+
+		glColor3f(1, 1, 1);
+
 		glPopMatrix();
 
 	}
-	
+
 
 	
 	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
@@ -112,6 +126,9 @@ void ButtonDraw(ButtonList* list)
 	glDisable(GL_TEXTURE_2D);
 
 	glPopMatrix();
+
+
+
 
 
 }

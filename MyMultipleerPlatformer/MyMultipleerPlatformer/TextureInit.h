@@ -7,7 +7,7 @@ extern GLuint textureId;
 extern GLuint playertextureId;
 extern GLuint menuTextureId;
 extern GLuint FontTextureId;
-
+extern float charwidth[256];
 
 void TextureInit();
 

@@ -150,6 +150,7 @@
     <ClCompile Include="map.c" />
     <ClCompile Include="menu.c" />
     <ClCompile Include="Player.c" />
+    <ClCompile Include="textOut.c" />
     <ClCompile Include="TextureInit.c" />
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +160,7 @@
     <ClInclude Include="menu.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="stb_image.h" />
+    <ClInclude Include="textOut.h" />
     <ClInclude Include="TextureInit.h" />
   </ItemGroup>
   <ItemGroup>

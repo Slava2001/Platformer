@@ -42,6 +42,9 @@
     <ClCompile Include="debug.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="textOut.c">
+      <Filter>Исходные файлы\menu</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TextureInit.h">
@@ -63,6 +66,9 @@
       <Filter>Исходные файлы\menu</Filter>
     </ClInclude>
     <ClInclude Include="debug.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="textOut.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
